@@ -16,18 +16,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toEndOf="@id/iv_item"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingEnd="10dp">
 
         <TextView
             android:id="@+id/title"
-            android:layout_width="230dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="제품 이름 이름 이름 이름 이름 이름 이름 이름"
+            android:layout_marginEnd="10dp"
             android:textSize="17sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,20 +50,29 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
-            android:text="가격 가격 원"
+            android:text="가격 가격"
             android:textSize="17sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/place" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="원"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/place"
+            app:layout_constraintStart_toEndOf="@id/price"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
         android:id="@+id/iv_chat"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="100dp"
-        android:src="@mipmap/ic_launcher"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="130dp"
+        android:src="@drawable/chat"
         app:layout_constraintBottom_toBottomOf="@id/iv_item"
         app:layout_constraintStart_toEndOf="@id/iv_item" />
 
@@ -73,7 +84,8 @@
         android:text="숫자"
         android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@id/iv_chat"
-        app:layout_constraintTop_toTopOf="@id/iv_chat" />
+        app:layout_constraintTop_toTopOf="@id/iv_chat"
+        app:layout_constraintBottom_toBottomOf="@id/iv_chat"/>
 
     <ImageView
         android:id="@+id/good"
@@ -92,7 +104,8 @@
         android:text="숫자"
         android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@id/good"
-        app:layout_constraintTop_toTopOf="@id/iv_chat" />
+        app:layout_constraintTop_toTopOf="@id/iv_chat"
+        app:layout_constraintBottom_toBottomOf="@id/good"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -101,7 +114,6 @@
         android:layout_marginTop="14dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_item"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
