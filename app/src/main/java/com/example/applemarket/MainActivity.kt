@@ -2,15 +2,17 @@ package com.example.applemarket
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
-import android.app.PendingIntent
+import android.content.DialogInterface
 import android.content.Intent
-import android.graphics.BitmapFactory
 import android.media.AudioAttributes
 import android.media.RingtoneManager
 import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.core.app.NotificationCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.applemarket.databinding.ActivityMainBinding
@@ -43,7 +45,22 @@ class MainActivity : AppCompatActivity() {
         binding.notificationBtn.setOnClickListener {
             notification()
         }
+    }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("종료")
+        builder.setIcon(R.mipmap.ic_launcher)
+        builder.setMessage("종료하시겠습니까?")
+        val listener = DialogInterface.OnClickListener { _, p0 ->
+            if (p0 == DialogInterface.BUTTON_POSITIVE) {
+                finish()
+            }
+        }
+        builder.setPositiveButton("확인", listener)
+        builder.setNegativeButton("취소", null)
+        builder.show()
     }
 
     private fun adapterOnClick(item: Item) {

@@ -4,23 +4,33 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/iv_item"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/item_radius"
-        android:src="@drawable/sample1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_item"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/item_radius"
+            android:src="@drawable/sample1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.cardview.widget.CardView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintStart_toEndOf="@id/iv_item"
+        app:layout_constraintStart_toEndOf="@id/cardview"
         app:layout_constraintTop_toTopOf="parent"
         android:paddingEnd="10dp">
 
@@ -73,8 +83,8 @@
         android:layout_height="15dp"
         android:layout_marginStart="130dp"
         android:src="@drawable/chat"
-        app:layout_constraintBottom_toBottomOf="@id/iv_item"
-        app:layout_constraintStart_toEndOf="@id/iv_item" />
+        app:layout_constraintBottom_toBottomOf="@id/cardview"
+        app:layout_constraintStart_toEndOf="@id/cardview" />
 
     <TextView
         android:id="@+id/chat_n"
@@ -93,7 +103,7 @@
         android:layout_height="15dp"
         android:layout_marginStart="10dp"
         android:src="@drawable/heart"
-        app:layout_constraintBottom_toBottomOf="@id/iv_item"
+        app:layout_constraintBottom_toBottomOf="@id/cardview"
         app:layout_constraintStart_toEndOf="@id/chat_n" />
 
     <TextView
@@ -113,7 +123,7 @@
         android:background="@color/gray"
         android:layout_marginTop="14dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_item"
+        app:layout_constraintTop_toBottomOf="@id/cardview"
         app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

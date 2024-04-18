@@ -1,5 +1,6 @@
 package com.example.applemarket
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.applemarket.databinding.ActivityDetailBinding
@@ -25,5 +26,13 @@ class DetailActivity : AppCompatActivity() {
         binding.detailPrice.text = itemItem.price.toString()
         binding.detailSeller.text = itemItem.seller
         binding.detailImage.setImageResource(itemItem.image)
+
+
+        //디테일 페이지에서 뒤로가기 버튼 눌렀을 때
+        binding.detailBackBtn.setOnClickListener {
+            var intent = Intent(this, MainActivity::class.java)
+            finish()
+            startActivity(intent)
+        }
     }
 }
