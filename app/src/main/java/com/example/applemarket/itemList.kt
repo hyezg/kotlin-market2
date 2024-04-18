@@ -10,8 +10,7 @@ fun itemList(): List<Item> {
             price = 1000,
             place = "서울 서대문구 창천동",
             goodN = 13,
-            chatN = 25,
-            viewtype = 1
+            chatN = 25
         ),
         Item(
             image = (R.drawable.sample2),
@@ -21,8 +20,7 @@ fun itemList(): List<Item> {
             price = 20000,
             place = "인천 계양구 귤현동",
             goodN = 8,
-            chatN = 28,
-            viewtype = 2
+            chatN = 28
         ),
         Item(
             image = (R.drawable.sample3),
@@ -32,8 +30,7 @@ fun itemList(): List<Item> {
             price = 10000,
             place = "수성구 범어동",
             goodN = 23,
-            chatN = 5,
-            viewtype = 3
+            chatN = 5
         ),
         Item(
             image = (R.drawable.sample4),
@@ -43,8 +40,7 @@ fun itemList(): List<Item> {
             price = 10000,
             place = "해운대구 우제2동",
             goodN = 14,
-            chatN = 17,
-            viewtype = 4
+            chatN = 17
         ),
         Item(
             image = (R.drawable.sample5),
@@ -54,8 +50,7 @@ fun itemList(): List<Item> {
             price = 50000,
             place = "연제구 연산제8동",
             goodN = 22,
-            chatN = 9,
-            viewtype = 5
+            chatN = 9
         ),
         Item(
             (R.drawable.sample6),
@@ -65,8 +60,7 @@ fun itemList(): List<Item> {
             50000,
             "수원시 영통구 원천동",
             25,
-            16,
-            6
+            16
         ), Item(
             (R.drawable.sample7),
             "울산 동해오션뷰 60평 복층 펜트하우스 1일 숙박권 펜션 힐링 숙소 별장",
@@ -75,8 +69,7 @@ fun itemList(): List<Item> {
             150000,
             "남구 옥동",
             142,
-            54,
-            7
+            54
         ), Item(
             (R.drawable.sample8),
             "샤넬 탑핸들 가방",
@@ -85,8 +78,7 @@ fun itemList(): List<Item> {
             180000,
             "동래구 온천제2동",
             31,
-            7,
-            8
+            7
         ), Item(
             (R.drawable.sample9),
             "4행정 엔진분무기 판매합니다.",
@@ -95,8 +87,7 @@ fun itemList(): List<Item> {
             3000,
             "원주시 명륜2동",
             7,
-            28,
-            9
+            28
         ), Item(
             (R.drawable.sample10),
             "셀린느 버킷 가방",
@@ -105,8 +96,7 @@ fun itemList(): List<Item> {
             190000,
             "중구 동화동",
             40,
-            6,
-            9
+            6
         )
 
     )

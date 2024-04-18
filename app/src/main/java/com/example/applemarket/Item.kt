@@ -12,6 +12,5 @@ data class Item(
     val price: Int,
     val place: String,
     val goodN: Int,
-    val chatN: Int,
-    val viewtype: Int
+    val chatN: Int
 ) : Parcelable
