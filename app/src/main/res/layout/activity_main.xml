@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/alarm"
+        android:id="@+id/notificationBtn"
         android:src="@drawable/bell"
         android:background="@color/white"
         android:layout_width="30dp"
