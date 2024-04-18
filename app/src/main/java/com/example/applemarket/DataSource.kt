@@ -11,7 +11,8 @@ class DataSource {
             }
         }
     }
-    fun getItemList() : List<Item>{
+
+    fun getItemList(): List<Item> {
         return itemList()
     }
 }

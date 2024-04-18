@@ -6,23 +6,27 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.applemarket.databinding.ItemLayoutBinding
 
-class MyAdapter(private  val onClick: (Item) -> Unit) :
-    RecyclerView.Adapter<RecyclerView.ViewHolder>()  {
-        var itemList = listOf<Item>()
+class MyAdapter(private val onClick: (Item) -> Unit) :
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    var itemList = listOf<Item>()
 
-        interface ItemClick {
-            fun onClick(view: View, position: Int)
-        }
-        var itemClick: ItemClick? = null
+    interface ItemClick {
+        fun onClick(view: View, position: Int)
+    }
+
+    var itemClick: ItemClick? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val binding = ItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent,false)
+        val binding = ItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return Holder(binding)
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        holder.itemView.setOnClickListener{
-            itemClick?.onClick(it,position)
+        val currentItem = itemList[position]
+        val myholder = holder as Holder
+        myholder.bind(currentItem)
+        holder.itemView.setOnClickListener {
+            onClick(currentItem)
         }
     }
 
@@ -31,12 +35,16 @@ class MyAdapter(private  val onClick: (Item) -> Unit) :
     }
 
     inner class Holder(private val binding: ItemLayoutBinding) :
-        RecyclerView.ViewHolder(binding.root){
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Item) {
             binding.apply {
+                binding.ivItem.setImageResource(item.image)
                 binding.title.text = item.title
                 binding.place.text = item.place
-                binding.price.setText(item.price)
+                binding.chatN.text = item.chatN.toString()
+                binding.goodN.text = item.goodN.toString()
+                binding.price.text = item.price.toString()
+
             }
         }
     }

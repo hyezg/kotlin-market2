@@ -8,6 +8,7 @@ class DetailActivity : AppCompatActivity() {
     companion object {
         const val EXTRA_ITEM: String = "extra_item"
     }
+
     private val binding: ActivityDetailBinding by lazy {
         ActivityDetailBinding.inflate(layoutInflater)
     }

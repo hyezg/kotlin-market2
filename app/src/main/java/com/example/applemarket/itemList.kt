@@ -9,8 +9,8 @@ fun itemList(): List<Item> {
             seller = "대현동",
             price = 1000,
             place = "서울 서대문구 창천동",
-            good = 13,
-            chat = 25,
+            goodN = 13,
+            chatN = 25,
             viewtype = 1
         ),
         Item(
@@ -20,8 +20,8 @@ fun itemList(): List<Item> {
             seller = "안마담",
             price = 20000,
             place = "인천 계양구 귤현동",
-            good = 8,
-            chat = 28,
+            goodN = 8,
+            chatN = 28,
             viewtype = 2
         ),
         Item(
@@ -31,8 +31,8 @@ fun itemList(): List<Item> {
             seller = "코코유",
             price = 10000,
             place = "수성구 범어동",
-            good = 23,
-            chat = 5,
+            goodN = 23,
+            chatN = 5,
             viewtype = 3
         ),
         Item(
@@ -42,8 +42,8 @@ fun itemList(): List<Item> {
             seller = "Nicole",
             price = 10000,
             place = "해운대구 우제2동",
-            good = 14,
-            chat = 17,
+            goodN = 14,
+            chatN = 17,
             viewtype = 4
         ),
         Item(
@@ -53,8 +53,8 @@ fun itemList(): List<Item> {
             seller = "절명",
             price = 50000,
             place = "연제구 연산제8동",
-            good = 22,
-            chat = 9,
+            goodN = 22,
+            chatN = 9,
             viewtype = 5
         ),
         Item(
