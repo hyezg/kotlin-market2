@@ -12,11 +12,11 @@ class MyAdapter(private val onClick: (Item) -> Unit) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     var itemList = listOf<Item>()
 
-    interface ItemClick {
-        fun onClick(view: View, position: Int)
-    }
+    /* interface ItemClick {
+         fun onClick(position: Int)
+     }
 
-    var itemClick: ItemClick? = null
+     var itemClick: ItemClick? = null*/
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val binding = ItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -27,9 +27,11 @@ class MyAdapter(private val onClick: (Item) -> Unit) :
         val currentItem = itemList[position]
         val myholder = holder as Holder
         myholder.bind(currentItem)
+
         holder.itemView.setOnClickListener {
             onClick(currentItem)
         }
+
     }
 
     override fun getItemCount(): Int {
@@ -52,6 +54,7 @@ class MyAdapter(private val onClick: (Item) -> Unit) :
             }
         }
     }
+
     inner class Holder(private val binding: ItemLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
         val dec = DecimalFormat("#,###")

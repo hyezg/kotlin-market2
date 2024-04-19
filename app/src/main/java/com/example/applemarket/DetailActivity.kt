@@ -37,4 +37,9 @@ class DetailActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    //뒤로가기 ?
+    override fun onBackPressed() {
+        super.onBackPressed()
+    }
 }
