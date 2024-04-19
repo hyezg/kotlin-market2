@@ -28,3 +28,11 @@
 ## 구현 완료 : 메인페이지 + 상세 페이지
 <img src="https://github.com/hyezg/kotlin-market2/assets/112006114/ab344e0f-5168-469a-bd97-5664c3d19924" width="25%">
 <img src="https://github.com/hyezg/kotlin-market2/assets/112006114/24131d67-0440-4f8f-a4d6-55d6f8c430d0" width="25%">
+
+---
+#### 참고 자료
+[이미지 라운드 처리하기](https://medium.com/@sunminlee89/%EA%B0%80%EC%9E%A5-%EC%89%BD%EA%B2%8C-%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%97%90-rounded-corner-%EC%B2%98%EB%A6%AC%ED%95%98%EA%B8%B0-with-cardview-da049e4adb22)
+<br>
+[숫자 단위 처리하기](https://mmol.tistory.com/270)
+
+
