@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.applemarket.databinding.ItemLayoutBinding
+import java.text.DecimalFormat
 
 class MyAdapter(private val onClick: (Item) -> Unit) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -53,6 +54,7 @@ class MyAdapter(private val onClick: (Item) -> Unit) :
     }
     inner class Holder(private val binding: ItemLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
+        val dec = DecimalFormat("#,###")
         fun bind(item: Item) {
             binding.apply {
                 binding.ivItem.setImageResource(item.image)
@@ -60,7 +62,7 @@ class MyAdapter(private val onClick: (Item) -> Unit) :
                 binding.place.text = item.place
                 binding.chatN.text = item.chatN.toString()
                 binding.goodN.text = item.goodN.toString()
-                binding.price.text = item.price.toString()
+                binding.price.text = dec.format(item.price).toString()
 
             }
         }
