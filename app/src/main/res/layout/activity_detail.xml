@@ -9,11 +9,12 @@
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="510dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/detail_bottom">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -30,8 +31,8 @@
 
             <ImageView
                 android:id="@+id/detail_backBtn"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:src="@drawable/left"
@@ -41,16 +42,16 @@
             <ImageView
                 android:layout_width="26dp"
                 android:layout_height="26dp"
-                android:src="@drawable/user"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="16dp"
+                android:src="@drawable/user"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/detail_image"/>
+                app:layout_constraintTop_toBottomOf="@id/detail_image" />
 
             <TextView
                 android:id="@+id/detail_seller"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="70dp"
                 android:layout_marginTop="10dp"
                 android:text="아이디"
@@ -62,7 +63,7 @@
             <TextView
                 android:id="@+id/detail_place"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="70dp"
                 android:text="장소"
                 android:textSize="12sp"
@@ -76,22 +77,23 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="50dp"
                 android:text="39.3 c"
-                android:textSize="14sp"
                 android:textColor="@color/temperature"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/detail_image" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
                 android:text="매너온도"
                 android:textColor="@color/gray"
                 android:textSize="12sp"
-                android:layout_marginEnd="20dp"
-                app:layout_constraintTop_toBottomOf="@id/tv_c"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_c" />
 
-            <TextView
+            <View
                 android:id="@+id/line"
                 android:layout_width="match_parent"
                 android:layout_height="0.6dp"
@@ -105,23 +107,23 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="left"
                 android:text="타이틀 타이틀"
                 android:textSize="19sp"
                 android:textStyle="bold"
-                android:gravity="left"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/line"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@id/line" />
 
 
             <TextView
                 android:id="@+id/detail_introduce"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp"
                 android:paddingBottom="20dp"
                 android:text="물건에 관한 내용 물건에 관한 내용 물건에 관한 내용 물건에 관한 내용 물건에 관한 내용 물건에 관한 내용 물건에 관한 내용 물건에 관한 내용 물건에 관한 내용 물건에 관한 내용 물건에 관한 내용 "
@@ -134,48 +136,61 @@
 
     </ScrollView>
 
-    <ImageView
-        android:id="@+id/goodbtn"
-        android:layout_width="21dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/heart"
-        app:layout_constraintBottom_toBottomOf="@id/detail_price"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/scroll" />
-
-    <TextView
-        android:id="@+id/detail_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:text="가격000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/goodbtn"
-        app:layout_constraintTop_toBottomOf="@id/scroll" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="원"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/detail_price"
-        app:layout_constraintStart_toEndOf="@id/detail_price"
-        app:layout_constraintTop_toTopOf="@id/detail_price" />
-
-
-    <Button
-        android:id="@+id/detail_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="7dp"
-        android:text="채팅하기"
-        app:layout_constraintBottom_toBottomOf="@id/detail_price"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detail_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/detail_price" />
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:id="@+id/goodbtn"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/heart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/detail_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="가격000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/goodbtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="원"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/detail_price"
+            app:layout_constraintStart_toEndOf="@id/detail_price"
+            app:layout_constraintTop_toTopOf="@id/detail_price" />
+
+
+        <TextView
+            android:id="@+id/detail_btn"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/chat_btn"
+            android:gravity="center"
+            android:text="채팅하기"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@id/detail_price"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/detail_price" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
